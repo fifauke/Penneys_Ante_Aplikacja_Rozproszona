@@ -1,0 +1,32 @@
++ aSwitchD2,action,D2          # output 0=ON, 1=OFF (pin EDGE)
++ aSwitchD3,action,D3          # output 0=ON, 1=OFF (pin BIT)
+
+# (1,0,1,0,1)
+# PIN_EDGE = D2 (sterowany przez aSwitchD)
+# PIN_BIT  = D3 (sterowany przez aSwitchE)
+
+# bit #1 = 1
+: 00000000, aSwitchD3, 1      
+: 50000, aSwitchD2, 1       
+: 100000, aSwitchD2, 0  
+
+# bit #2 = 0
+: 150000, aSwitchD3, 0
+: 200000, aSwitchD2, 1
+: 250000, aSwitchD2, 0
+
+# bit #3 = 1
+: 300000, aSwitchD3, 1
+: 350000, aSwitchD2, 1
+: 400000, aSwitchD2, 0
+
+# bit #4 = 0
+: 450000, aSwitchD3, 0
+: 500000, aSwitchD2, 1
+: 550000, aSwitchD2, 0
+# bit #5 = 1
+: 600000, aSwitchD3, 1
+: 750000, aSwitchD2, 1
+: 800000, aSwitchD2, 0
+
+#
