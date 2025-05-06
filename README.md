@@ -1,2 +1,3 @@
 # Penneys_Ante_Aplikacja_Rozproszona
-Aplikacja rozproszona umożliwiająca rozgrywkę w probabilistyczną grę Penney's Ante oparta na komunikacji między serwerem a klientami.
+Projekt aplikacji rozproszonej umożliwiającej wielu klientom rozgrywkę w grę ”Penney’s ante”. Architektura systemu składa się z serwera, który odpowiada za rzucanie monetą, dystrybuowanie
+wyników rzutu i obliczanie statystyk. Serwer i klienci komunikują się ze sobą poprzez protokół ALP. Każdy klient otrzymuje poprzez GPIO indywidualną sekwencję bitów, która jest wzorcem do gry. Podczas rozgrywki serwer wysyła bity, a klient sprawdza, czy otrzymane bity nie składają się w jego wzorzec. Jeśli to nastąpi, to zgłasza serwerowi informację, że po n rzutach odnalazł swój wzorzec. Wygrana przyznawana jest uczestnikowi, który szybciej odnajdzie swój wzorzec.
